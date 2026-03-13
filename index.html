@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lucky Number Generator</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f6ff;
+}
+
+.box{
+margin-top:50px;
+background:white;
+padding:30px;
+width:300px;
+margin-left:auto;
+margin-right:auto;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input{
+width:80%;
+padding:10px;
+margin:8px;
+}
+
+button{
+padding:10px 20px;
+background:#2e7dff;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.result{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Lucky Number Generator</h1>
+
+<div class="box">
+
+<input type="number" id="n1" placeholder="Enter Number 1"><br>
+<input type="number" id="n2" placeholder="Enter Number 2"><br>
+<input type="number" id="n3" placeholder="Enter Number 3"><br>
+
+<button onclick="generate()">Generate Lucky Numbers</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<script>
+
+function generate(){
+
+let a = parseInt(document.getElementById("n1").value);
+let b = parseInt(document.getElementById("n2").value);
+let c = parseInt(document.getElementById("n3").value);
+
+if(isNaN(a) || isNaN(b) || isNaN(c)){
+document.getElementById("result").innerHTML="Enter all numbers";
+return;
+}
+
+let l1 = a + b;
+let l2 = b + c;
+let l3 = a + c;
+
+document.getElementById("result").innerHTML =
+"Lucky Numbers: " + l1 + " , " + l2 + " , " + l3;
+
+}
+
+</script>
+
+</body>
+</html>

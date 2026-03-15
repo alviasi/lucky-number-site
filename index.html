@@ -3,20 +3,7 @@ if(localStorage.getItem("login") !== "yes"){
     window.location.href = "login.html";
 }
 </script>
-<script>
-var correctPassword = "786";
 
-if(sessionStorage.getItem("loggedIn") !== "yes"){
-    var user = prompt("Enter Password");
-
-    if(user === correctPassword){
-        sessionStorage.setItem("loggedIn","yes");
-    } else {
-        document.body.innerHTML = "<h2>Access Denied</h2>";
-        throw new Error("Wrong Password");
-    }
-}
-</script>
 <!DOCTYPE html>
 <html>
 <head>

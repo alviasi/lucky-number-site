@@ -1,7 +1,21 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Lucky Number Generator</title>
+
+<script>
+
+var password = "786";   // yahan apna password likho
+
+var user = prompt("Enter Password");
+
+if(user != password){
+document.write("Access Denied");
+throw new Error("Wrong password");
+}
+
+</script>
 
 <style>
 body{
@@ -60,7 +74,6 @@ font-weight:bold;
 
 </div>
 
-
 <script>
 
 function generate(){
@@ -68,11 +81,6 @@ function generate(){
 let l1 = parseInt(document.getElementById("n1").value);
 let l2 = parseInt(document.getElementById("n2").value);
 let l3 = parseInt(document.getElementById("n3").value);
-
-if(isNaN(l1) || isNaN(l2) || isNaN(l3)){
-document.getElementById("result").innerHTML="Enter all numbers";
-return;
-}
 
 let lucky1 = (l1 - l2) + 57;
 let lucky2 = (l2 - l3) + 57;
@@ -84,3 +92,6 @@ document.getElementById("result").innerHTML =
 }
 
 </script>
+
+</body>
+</html>

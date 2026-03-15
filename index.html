@@ -13,16 +13,6 @@ if(user === null || user.trim() === "" || user !== correctPassword){
 <head>
 <title>Lucky Number Generator</title>
 
-<script>
-var correctPassword = "786";   //
-
-var user = prompt("Enter Password");
-
-if(user === null || user.trim() === "" || user !== correctPassword){
-    document.body.innerHTML = "<h2>Access Denied</h2>";
-    throw new Error("Wrong password");
-}
-</script>
 
 <style>
 body{

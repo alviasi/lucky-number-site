@@ -5,16 +5,14 @@
 <title>Lucky Number Generator</title>
 
 <script>
+var correctPassword = "786";   // 1234
 
-var password = "786"; // 
+var user = prompt("Enter Password");
 
-var user = prompt("enter passworld");
-
-if(user != password){
-document.write("Access Denied");
-throw new Error("Wrong password");
+if(user === null || user.trim() === "" || user !== correctPassword){
+    document.body.innerHTML = "<h2>Access Denied</h2>";
+    throw new Error("Wrong password");
 }
-
 </script>
 
 <style>

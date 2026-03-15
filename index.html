@@ -60,29 +60,27 @@ font-weight:bold;
 
 </div>
 
+
 <script>
 
 function generate(){
 
-let a = parseInt(document.getElementById("n1").value);
-let b = parseInt(document.getElementById("n2").value);
-let c = parseInt(document.getElementById("n3").value);
+let l1 = parseInt(document.getElementById("n1").value);
+let l2 = parseInt(document.getElementById("n2").value);
+let l3 = parseInt(document.getElementById("n3").value);
 
-if(isNaN(a) || isNaN(b) || isNaN(c)){
+if(isNaN(l1) || isNaN(l2) || isNaN(l3)){
 document.getElementById("result").innerHTML="Enter all numbers";
 return;
 }
 
-let l1 = a + b;
-let l2 = b + c;
-let l3 = a + c;
+let lucky1 = (l1 - l2) + 57;
+let lucky2 = (l2 - l3) + 57;
+let lucky3 = lucky2 + 1;
 
 document.getElementById("result").innerHTML =
-"Lucky Numbers: " + l1 + " , " + l2 + " , " + l3;
+"Lucky Numbers: " + lucky1 + " , " + lucky2 + " , " + lucky3;
 
 }
 
 </script>
-
-</body>
-</html>

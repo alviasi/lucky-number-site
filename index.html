@@ -1,4 +1,9 @@
 <script>
+if(localStorage.getItem("login") !== "yes"){
+    window.location.href = "login.html";
+}
+</script>
+<script>
 var correctPassword = "786";
 
 if(sessionStorage.getItem("loggedIn") !== "yes"){

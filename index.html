@@ -24,6 +24,7 @@ if(sessionStorage.getItem("loggedIn") !== "yes"){
 
 
 <style>
+    
 body{
 font-family: Arial;
 text-align:center;
@@ -81,7 +82,14 @@ font-weight:bold;
 </div>
 
 <script>
+<button onclick="logout()">Logout</button>
 
+<script>
+function logout(){
+localStorage.removeItem("login");
+window.location.href = "login.html";
+}
+</script>
 function generate(){
 
 let l1 = parseInt(document.getElementById("n1").value);

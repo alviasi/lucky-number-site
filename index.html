@@ -68,7 +68,14 @@ font-weight:bold;
 <body>
 
 <h1>Lucky Number Generator</h1>
+<button onclick="logout()">Logout</button>
 
+<script>
+function logout(){
+localStorage.removeItem("login");
+window.location.href = "login.html";
+}
+</script>
 <div class="box">
 
 <input type="number" id="n1" placeholder="Enter Number 1"><br>
@@ -81,10 +88,6 @@ font-weight:bold;
 
 </div>
 
-<script>
-<button onclick="logout()">Logout</button>
-
-<script>
 function logout(){
 localStorage.removeItem("login");
 window.location.href = "login.html";
